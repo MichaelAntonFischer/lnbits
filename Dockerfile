@@ -10,7 +10,7 @@ ENV PATH="/root/.local/bin:$PATH"
 WORKDIR /app
 RUN mkdir -p lnbits/data
 
-COPY . .
+COPY ./lnbits .
 
 RUN poetry config virtualenvs.create false
 RUN poetry install --only main
